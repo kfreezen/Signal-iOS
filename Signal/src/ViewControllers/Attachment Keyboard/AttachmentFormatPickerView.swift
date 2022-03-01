@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import ManagedSettings
 
 protocol AttachmentFormatPickerDelegate: AnyObject {
     func didTapCamera()
@@ -78,9 +79,19 @@ enum AttachmentType: String, CaseIterable, Dependencies {
     case contact
     case location
 
+    static var excludesShieldedAttachmentTypes: [AttachmentType] {
+        if #available(iOS 15, *) {
+                    return allCases.filter { (value: AttachmentType) in
+                        value != .gif
+                    }
+        } else {
+            return allCases
+        }
+    }
+    
     static var contactCases: [AttachmentType] {
         if payments.shouldShowPaymentsUI {
-            return allCases
+            return excludesShieldedAttachmentTypes
         } else {
             return everythingExceptPayments
         }
@@ -91,7 +102,7 @@ enum AttachmentType: String, CaseIterable, Dependencies {
     }
 
     static var everythingExceptPayments: [AttachmentType] {
-        return allCases.filter { (value: AttachmentType) in
+        return excludesShieldedAttachmentTypes.filter { (value: AttachmentType) in
             value != .payment
         }
     }

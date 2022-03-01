@@ -31,7 +31,7 @@ public enum PushRegistrationError: Error {
     // Private callout queue that we can use to synchronously wait for our call to start
     // TODO: Rewrite call message routing to be able to synchronously report calls
     private static let calloutQueue = DispatchQueue(
-        label: "org.whispersystems.signal.PKPushRegistry",
+        label: "com.kentfriesen.signal.PKPushRegistry",
         autoreleaseFrequency: .workItem
     )
     private var calloutQueue: DispatchQueue { Self.calloutQueue }

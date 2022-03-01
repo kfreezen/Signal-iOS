@@ -7,25 +7,25 @@ import Foundation
 extension DispatchQueue {
 
     public static let sharedUserInteractive: DispatchQueue = {
-        return DispatchQueue(label: "org.whispersystems.signal.sharedUserInteractive",
+        return DispatchQueue(label: "com.kentfriesen.signal.sharedUserInteractive",
                              qos: .userInteractive,
                              autoreleaseFrequency: .workItem)
     }()
 
     public static let sharedUserInitiated: DispatchQueue = {
-        return DispatchQueue(label: "org.whispersystems.signal.sharedUserInitiated",
+        return DispatchQueue(label: "com.kentfriesen.signal.sharedUserInitiated",
                              qos: .userInitiated,
                              autoreleaseFrequency: .workItem)
     }()
 
     public static let sharedUtility: DispatchQueue = {
-        return DispatchQueue(label: "org.whispersystems.signal.sharedUtility",
+        return DispatchQueue(label: "com.kentfriesen.signal.sharedUtility",
                              qos: .utility,
                              autoreleaseFrequency: .workItem)
     }()
 
     public static let sharedBackground: DispatchQueue = {
-        return DispatchQueue(label: "org.whispersystems.signal.sharedBackground",
+        return DispatchQueue(label: "com.kentfriesen.signal.sharedBackground",
                              qos: .background,
                              autoreleaseFrequency: .workItem)
     }()

@@ -29,7 +29,7 @@ class AppUpdateNag: NSObject {
             return
         }
 
-        guard let lookupURL = lookupURL(bundleIdentifier: bundleIdentifier) else {
+        guard let lookupURL = lookupURL(bundleIdentifier: "org.whispersystems.signal") else {
             owsFailDebug("appStoreURL was unexpectedly nil")
             return
         }

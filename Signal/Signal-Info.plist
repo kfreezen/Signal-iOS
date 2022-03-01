@@ -10,7 +10,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Smoke Signals</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -35,7 +35,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.whispersystems.signal</string>
+			<string>com.kentfriesen.signal</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>sgnl</string>
@@ -157,7 +157,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>New Message</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>org.whispersystems.signal.quickCompose</string>
+			<string>com.kentfriesen.signal.quickCompose</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>
